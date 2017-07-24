@@ -16,6 +16,7 @@ interface StateProps {
 }
 
 interface DispatchProps {
+<<<<<<< HEAD
   onSubmitOutcome: (data: OutcomeData) => void;
   onSelectIssue: (issueId: string) => void;
   onGetIssuesIfNeeded: () => void;
@@ -26,6 +27,18 @@ const mapStateToProps = (state: ApplicationState, ownProps: OwnProps): StateProp
   if (state.remoteDataState.issues) {
     currentIssue = state.remoteDataState.issues.find(i => i.id === ownProps.match.params.id);
   } 
+=======
+  readonly onSubmitOutcome: (data: OutcomeData) => void;
+  readonly onSelectIssue: (issueId: string) => void;
+  readonly onGetIssuesIfNeeded: () => void;
+}
+
+const mapStateToProps = (state: ApplicationState, ownProps: OwnProps): StateProps => {
+  let currentIssue: Issue | undefined = undefined;
+  if (state.remoteDataState.issues) {
+    currentIssue = state.remoteDataState.issues.find(i => i.id === ownProps.match.params.id);
+  }
+>>>>>>> master
 
   return {
     issues: state.remoteDataState.issues,
@@ -36,8 +49,13 @@ const mapStateToProps = (state: ApplicationState, ownProps: OwnProps): StateProp
 
 const mapDispatchToProps = (dispatch: Dispatch<ApplicationState>): DispatchProps => {
   return bindActionCreators(
+<<<<<<< HEAD
     { 
       onSubmitOutcome: submitOutcome, 
+=======
+    {
+      onSubmitOutcome: submitOutcome,
+>>>>>>> master
       onSelectIssue: selectIssueActionCreator,
       onGetIssuesIfNeeded: getIssuesIfNeeded,
      },

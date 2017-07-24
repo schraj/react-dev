@@ -6,12 +6,20 @@ interface Props {
   readonly issues: Issue[];
   readonly currentIssue?: Issue;
   readonly completedIssueIds: string[];
+<<<<<<< HEAD
   onSelectIssue: (issueId: string) => Function;
+=======
+  readonly onSelectIssue: (issueId: string) => Function;
+>>>>>>> master
 }
 
 const IssuesList: React.StatelessComponent<Props> = ( props: Props) => {
     let currentIssueId: string = props.currentIssue ? props.currentIssue.id : '';
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> master
     return (
       <ul className="issues-list" role="navigation">
         {props.issues && props.issues.map ? props.issues.map(issue =>

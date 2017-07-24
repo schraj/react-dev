@@ -8,7 +8,11 @@ interface Props {
   readonly issues: Issue[];
   readonly currentIssue?: Issue;
   readonly completedIssueIds: string[];
+<<<<<<< HEAD
   onSelectIssue: (issueId: string) => Function;
+=======
+  readonly onSelectIssue: (issueId: string) => Function;
+>>>>>>> master
 }
 
 const Layout: React.StatelessComponent<Props> = (props: Props) => (
@@ -25,11 +29,19 @@ const Layout: React.StatelessComponent<Props> = (props: Props) => (
               <LocationContainer />
             </div>
           </header>
+<<<<<<< HEAD
           <Sidebar 
             issues={props.issues}
             currentIssue={props.currentIssue ? props.currentIssue : undefined}
             completedIssueIds={props.completedIssueIds}
             onSelectIssue={props.onSelectIssue}     
+=======
+          <Sidebar
+            issues={props.issues}
+            currentIssue={props.currentIssue ? props.currentIssue : undefined}
+            completedIssueIds={props.completedIssueIds}
+            onSelectIssue={props.onSelectIssue}
+>>>>>>> master
           />
         </div>
       </aside>
