@@ -5,6 +5,9 @@ import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import createHistory from 'history/createBrowserHistory';
 import createStore from './redux/store';
+// import { I18nextProvider } from 'react-i18next';
+// import i18n from './services/i18n'; // initialized i18next instance
+
 import registerServiceWorker from './registerServiceWorker';
 import { HomePageContainer } from './components/home';
 import { AboutPageContainer } from './components/about';
